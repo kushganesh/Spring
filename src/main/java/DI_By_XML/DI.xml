@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--    <bean class="DI_By_XML.Book" id="book1">-->
+    <!--        <property name="name" value="You Can Win"/>-->
+    <!--        <property name="author" value="J.K Morgin"/>-->
+    <!--    </bean>-->
+
+
+    <!--    <bean class="DI_By_XML.Student" id="student1">-->
+    <!--        <property name="id" value="101"/>-->
+    <!--        <property name="name" value="Ganesh"/>-->
+    <!--        <property name="rollNumber" value="0191CS201064"/>-->
+    <!--        <property name="semester" value="8th"/>-->
+    <!--        <property name="book" ref="book1"/>-->
+    <!--    </bean>-->
+
+    <bean class="DI_By_XML.Book" id="book_1">
+        <constructor-arg value="Maruti"/>
+        <constructor-arg value="Balika"/>
+    </bean>
+
+
+    <bean class="DI_By_XML.Student" id="student1">
+        <constructor-arg value="101"/>
+        <constructor-arg value="Bhai Bhai"/>
+        <constructor-arg value="0191CS2010654"/>
+        <constructor-arg value="7th"/>
+        <constructor-arg ref="book_1"/>
+    </bean>
+
+</beans>

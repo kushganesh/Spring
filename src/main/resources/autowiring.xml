@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--        By name use setter method internally-->
+    <bean class="AutoWiring_Xml.Car" id="car_o1" autowire="byName">
+        <property name="carName" value="Toyota 01"/>
+        <property name="carPrice" value="20000"/>
+    </bean>
+
+    <bean class="AutoWiring_Xml.Engine" id="engine1">
+        <property name="enName" value="En_01"/>
+        <property name="capacity" value="10000"/>
+    </bean>
+
+    <bean class="AutoWiring_Xml.Engine" id="engine" autowire-candidate="false">
+        <property name="enName" value="En_0101"/>
+        <property name="capacity" value="60000"/>
+    </bean>
+
+    <!--    <bean class="AutoWiring_Xml.Car" id="car_o1" autowire="byType">-->
+    <!--        <property name="carName" value="Tata"/>-->
+    <!--        <property name="carPrice" value="3LPA"/>-->
+    <!--    </bean>-->
+
+
+    <!--    <bean class="AutoWiring_Xml.Engine" id="engine2" autowire-candidate="false">-->
+    <!--        <property name="enName" value="Ganesh kushwah"/>-->
+    <!--        <property name="capacity" value="200,000"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean class="AutoWiring_Xml.Car" id="car_o1" autowire="constructor">-->
+    <!--        <constructor-arg value="Car-1" index="0"/>-->
+    <!--        <constructor-arg value="20020" index="1"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean class="AutoWiring_Xml.Engine" id="Engine">-->
+    <!--        <constructor-arg value="Ganesh"/>-->
+    <!--        <constructor-arg value="Moaoao "/>-->
+    <!--    </bean>-->
+
+    <!--    <bean class="AutoWiring_Xml.Engine" id="Engine1" autowire-candidate="false">-->
+    <!--        <constructor-arg value="Ganesh1"/>-->
+    <!--        <constructor-arg value="Moaoao1 "/>-->
+    <!--    </bean>-->
+
+</beans>
