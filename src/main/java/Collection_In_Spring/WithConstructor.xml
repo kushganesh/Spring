@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans.xsd
+                    http://www.springframework.org/schema/util
+                    http://www.springframework.org/schema/util/spring-util.xsd
+                    http://www.springframework.org/schema/context
+                    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean class="Collection_In_Spring.Store" id="s1">
+		<constructor-arg name="list">
+			<list>
+				<value>24</value>
+				<value>56</value>
+			</list>
+		</constructor-arg>
+
+		<constructor-arg name="set">
+			<set>
+				<value>204</value>
+				<value>560</value>
+			</set>
+		</constructor-arg>
+
+
+		<constructor-arg name="map">
+			<map>
+				<entry key="Ganesh" value="90" />
+			</map>
+		</constructor-arg>
+
+		<constructor-arg name="storeType" ref="d1" />
+
+
+	</bean>
+
+	<bean class="Collection_In_Spring.StoreType" id="d1">
+		<constructor-arg name="name" value="Ganesh Kushwah" />
+	</bean>
+
+
+
+</beans>

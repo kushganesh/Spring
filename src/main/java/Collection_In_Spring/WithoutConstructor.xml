@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans.xsd
+                    http://www.springframework.org/schema/util
+                    http://www.springframework.org/schema/util/spring-util.xsd
+                    http://www.springframework.org/schema/context
+                    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="Collection_In_Spring.Store" id="s1">
+		<property name="list">
+			<list>
+				<value>12</value>
+				<value>45</value>
+				<value>78</value>
+			</list>
+		</property>
+
+		<property name="set">
+			<set>
+				<value>67</value>
+				<value>57</value>
+				<value>47</value>
+				<value>47</value>
+				<value>47</value>
+				<value>37</value>
+			</set>
+			
+		</property>
+
+
+		<property name="map">
+			<map>
+				<entry key="Ganesh" value="12" />
+				<entry key="Rohit" value="89" />
+			</map>
+		</property>
+
+		<property name="storeType" ref="d1" />
+	</bean>
+
+	<bean class="Collection_In_Spring.StoreType" id="d1">
+		<property name="name" value="StoreType" />
+	</bean>
+
+
+
+
+</beans>
+
